@@ -1,0 +1,45 @@
+.center_it {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.image_container {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.image{
+    display: block;
+    height: 100%;
+    transition: all 0.5s ease;
+
+}
+.ovarlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 2;
+    & * {
+        margin: 0;
+        padding: 0;
+    }
+}
+.image_container:hover .ovarlay{
+    height: 100%;
+}
+.image_container:hover .image {
+    transform: scale(1.1);
+}
+
+
